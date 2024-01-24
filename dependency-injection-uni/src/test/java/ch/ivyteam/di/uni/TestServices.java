@@ -4,17 +4,15 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import ch.ivyteam.di.uni.impl.NiceServiceImpl;
 import ch.ivyteam.di.uni.impl.OtherServiceImpl;
-import ch.ivyteam.di.uni.impl.SuperManager;
 
 class TestServices {
 
-  private static final Injector injector = Guice.createInjector(new ManagerModule());
+  private static final Injector injector = Guice.createInjector();
 
   @Test
   void niceService() {
@@ -35,11 +33,11 @@ class TestServices {
   }
 
 
-  static class ManagerModule extends AbstractModule {
-    @Override
-    protected void configure() {
-      bind(Manager.class).to(SuperManager.class);
-    }
-
-  }
+//  static class ManagerModule extends AbstractModule {
+//    @Override
+//    protected void configure() {
+//      bind(Manager.class).to(SuperManager.class);
+//    }
+//
+//  }
 }
