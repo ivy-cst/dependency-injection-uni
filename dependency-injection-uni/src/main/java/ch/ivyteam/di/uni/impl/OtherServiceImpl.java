@@ -10,4 +10,9 @@ public class OtherServiceImpl extends AbstractService implements OtherService {
   public OtherServiceImpl(Manager manager) {
     super(manager, "Other");
   }
+
+  @Inject
+  public void methodInjection() {
+    System.out.println("Also executed after construction");
+  }
 }
