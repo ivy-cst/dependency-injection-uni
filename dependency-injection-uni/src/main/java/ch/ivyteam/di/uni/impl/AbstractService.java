@@ -5,8 +5,8 @@ import ch.ivyteam.di.uni.Service;
 
 public class AbstractService implements Service {
 
-  private Manager manager;
-  private String name;
+  private final Manager manager;
+  private final String name;
 
   public AbstractService(Manager manager, String name) {
     this.manager = manager;
