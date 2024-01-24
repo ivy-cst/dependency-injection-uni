@@ -1,8 +1,9 @@
 package ch.ivyteam.di.uni.impl;
 
 import ch.ivyteam.di.uni.Manager;
+import jakarta.inject.Singleton;
 
-//@Singleton
+@Singleton
 public class SuperManager implements Manager {
 
   public SuperManager() {
