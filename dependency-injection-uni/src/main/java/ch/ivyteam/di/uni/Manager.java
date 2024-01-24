@@ -1,10 +1,10 @@
 package ch.ivyteam.di.uni;
 
-import com.google.inject.ImplementedBy;
+import com.google.inject.ProvidedBy;
 
-import ch.ivyteam.di.uni.impl.SuperManager;
+import ch.ivyteam.di.uni.impl.ManagerProvider;
 
-@ImplementedBy(SuperManager.class)
+@ProvidedBy(ManagerProvider.class)
 public interface Manager {
 
   String name();
