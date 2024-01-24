@@ -11,6 +11,7 @@ public class AbstractService implements Service {
   public AbstractService(Manager manager, String name) {
     this.manager = manager;
     this.name = name;
+    System.out.println("Created " + info());
   }
 
   @Override
@@ -25,7 +26,7 @@ public class AbstractService implements Service {
 
   @Override
   public String info() {
-    return manager + " " + this;
+    return this + " of " + manager;
   }
 
   @Override
